@@ -1,0 +1,35 @@
+body{
+
+}
+.wrapper-container{
+  height: 100%;
+  
+}
+.login-wrapper{
+  margin-top: 250px;
+  border-top: 1px solid #ddd;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.loginHeader{
+  text-align: center;
+}
+.loginHeader h1 span{
+  border-bottom: 3px solid #aaa;
+  padding: 10px;
+}
+.signInForm{
+  padding: 30px 10px 30px 10px;
+}
+.loginButton{
+  margin-top: 30px;
+}
+.registerCta{
+  text-align: right;
+  margin-top: 5px;
+}
+form .form-control{
+  border: 2px solid #aaa;
+}
+
+form .btn{
+}

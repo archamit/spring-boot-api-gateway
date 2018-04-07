@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style1.css">
+</head>
+<body data-ng-app="parNorthAm">
+<div class="header">
+     <img src="static/img/par-logo.png" alt="logo" />
+   </div>
+  <div class="parent-wrapper" ng-controller="parentWrapper">    
+    <section class="tabsSection" style="margin-bottom: 30px; margin-top: 30px;" th:include="partials/tabs"></section>
+    <div class="container-fluid wrapper-container" ng-view></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+  <script src="/static/js/lib/angular-local-storage.min.js"></script>
+
+  <script src="/static/js/script.js"></script>
+
+  <script src="/static/js/app.js"></script>
+  
+  <script src="/static/js/services/carInsuranceService.js"></script>
+  <script src="/static/js/services/UserDetailsService.js"></script>
+  <script src="/static/js/services/emergencyContactService.js"></script>
+  <script src="/static/js/services/nomineesDetailService.js"></script>
+
+  <script src="/static/js/controllers/parentWrapperController.js"></script>
+  <script src="/static/js/controllers/pageOneController.js"></script>
+  <script src="/static/js/controllers/carInsuranceContrller.js"></script>
+  <script src="/static/js/controllers/emergencyContactController.js"></script>
+  <script src="/static/js/controllers/nomineesDetailController.js"></script>
+  <script src="/static/js/controllers/UserDetailsContrller.js"></script>
+
+</body>
+</html>

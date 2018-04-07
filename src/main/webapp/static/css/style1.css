@@ -1,0 +1,41 @@
+body, html{
+  background-image: url("../img/car-5.jpg");
+   background-size: auto
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.header img {
+ float: left;
+ width: 100px;
+ height: 80px;
+ background: white;
+ overflow: visible;
+}
+.wrapper-container{
+  height: 100%;
+
+}
+.login-wrapper{
+  background-color: rgba(0,0,0,0.7);
+  margin-top: 250px;
+  border-top: 1px solid #333;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.loginHeader{
+  text-align: center;
+}
+.loginHeader h1 span{
+  border-bottom: 3px solid #aaa;
+  padding: 10px;
+}
+.signInForm{
+  padding: 30px 10px 30px 10px;
+}
+.loginButton{
+  margin-top: 30px;
+}
+.registerCta{
+  text-align: right;
+  margin-top: 5px;
+}

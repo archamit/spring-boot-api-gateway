@@ -1,0 +1,143 @@
+<style>
+  .firstName.ng-dirty.ng-invalid-required {
+      background-color: #ffe6e6;
+  }
+  .lastName.ng-dirty.ng-invalid-required {
+      background-color: #ffe6e6;
+  }
+  
+  .phoneNo.ng-dirty.ng-invalid-required {
+      background-color: #ffe6e6;
+  }
+  
+  .address.ng-dirty.ng-invalid-required {
+      background-color: #ffe6e6;
+  }
+  
+  .zip.ng-dirty.ng-invalid-required {
+      background-color: #ffe6e6;
+  }
+  
+  .firstName.ng-valid {
+      background-color: #eeffe6;
+  }
+  
+  .lastName.ng-valid {
+      background-color: #eeffe6;
+  }
+  
+  .phoneNo.ng-valid {
+      background-color: #eeffe6;
+  }
+  
+  .address.ng-valid {
+      background-color: #eeffe6;
+  }
+  
+  .zip.ng-valid {
+      background-color: #eeffe6;
+  }
+  
+.slow .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s; }    
+</style>
+<div ng-controller="NomineesDetailController as ctrl">
+<div class="col-md-5">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Nominees form</div>
+    <div class="panel-body">
+			<form accept-charset="UTF-8"	name="myForm"			
+				class="simple_form new_user_basic"
+				id="new_user_basic" method="post" novalidate="novalidate">				
+
+				<div class="form-group name required">
+					<label class="First Name required control-label" for="firstName"><abbr
+						title="required">*</abbr> First Name</label><input
+						class="string firstName required form-control" id="firstName" ng-model="ctrl.nomineesDetailData.firstName" required="required"
+						name="user_basic[firstName]" placeholder="Enter First Name" type="text">
+					<p class="help-block">Enter First Name</p>
+				</div>
+
+				<div class="form-group carModel required">
+					<label class="Last Name required control-label" for="lastName"><abbr
+						title="required">*</abbr> Last Name</label><input
+						class="string lastName required form-control" id="lastName" ng-model="ctrl.nomineesDetailData.lastName" required="required"
+						name="user_basic[lastName]" placeholder="Enter Last Name" type="text">
+					<p class="help-block">Enter Last Name</p>
+				</div>
+				
+				<div class="form-group name required">
+					<label class="Phone No required control-label" for="phoneNo"><abbr
+						title="required">*</abbr> Phone No</label><input
+						class="string phoneNo required form-control" id="phoneNo"
+						name="user_basic[phoneNo]" placeholder="Enter Phone No" type="text" ng-model="ctrl.nomineesDetailData.phoneNo" required="required" >
+					<p class="help-block">Enter Phone No</p>
+				</div>
+				
+				
+				<div class="form-group name required">
+					<label class="Address required control-label" for="address"><abbr
+						title="required">*</abbr> Address</label><input
+						class="string address required form-control" id="address"
+						name="user_basic[address]" placeholder="Enter address" type="text" ng-model="ctrl.nomineesDetailData.address" required="required" >
+					<p class="help-block">Enter Address</p>
+				</div>
+				
+				<div class="form-group name required">
+					<label class="zip required control-label" for="zip"><abbr
+						title="required">*</abbr> Zip</label><input
+						class="string zip required form-control" id="zip"
+						name="user_basic[zip]" placeholder="Enter zip" type="text" ng-model="ctrl.nomineesDetailData.zip" required="required">
+					<p class="help-block">Enter Zip</p>
+				</div>
+				<button class="btn btn-success btn-flat pull-left" id="search-btn" ng-click="ctrl.submit();" ng-disabled="myForm.$invalid" >Save Nominees</button>&nbsp;
+				<button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" ng-disabled="myForm.$pristine">Reset Form</button>
+			</form>
+		</div>
+  </div>
+</div>
+ 
+<div class="col-md-7 pull-right" ng-init="ctrl.fetchAllData();">
+  <h4>Nominees Details</h4>
+  <hr>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+      	<th>Edit</th>
+      	<th>Delete</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone No</th>
+        <th>Address</th>
+        <th>zip</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-ng-repeat="data in ctrl.nomineesDetailList">
+         <td class="text-center">
+            <input type="radio" ng-class="rdo" name="rdo" value="{{data.id}}" ng-model="data.id"  ng-click="ctrl.checkedRdo(data)">
+        </td>
+        <td class="text-center">
+        	<button type="button" class="btn btn-link" ng-click="ctrl.delete(data.id)" value="{{data.id}}"> <img src="../static/img/delete.ico" width="40" height="40"></button>
+        </td>
+        <td>{{data.firstName}}</td>
+        <td>{{data.lastName}}</td>        
+        <td>{{data.phoneNo}}</td> 
+        <td>{{data.address}}</td> 
+        <td>{{data.zip}}</td> 
+      </tr>         
+    </tbody>
+    <tfoot>
+     <tr>
+     	<th>Edit</th>
+     	<th>Delete</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone No</th>
+        <th>Address</th>
+        <th>zip</th>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  
+  </div>
